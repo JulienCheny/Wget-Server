@@ -1,0 +1,7 @@
+nginx:
+  image: nginx:alpine
+  volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/srv/wget-server/public:ro
+  ports: 
+    - 9090:80
